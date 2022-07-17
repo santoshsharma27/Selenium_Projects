@@ -1,0 +1,3 @@
+23:54:52.636 [main] INFO  alpha.Demo - Button is displayed
+23:54:52.645 [main] ERROR alpha.Demo - Button is not working
+23:54:52.645 [main] FATAL alpha.Demo - Button is missing

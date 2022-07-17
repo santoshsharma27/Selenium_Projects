@@ -1,0 +1,9 @@
+a20:36:04.707 [main] ERROR alpha.Demo - Buttin is not working
+20:36:04.711 [main] FATAL alpha.Demo - This is fatal
+20:37:18.959 [main] DEBUG alpha.Demo - I have clicked on Button
+20:37:18.965 [main] INFO  alpha.Demo - Buuton is displayed
+20:37:18.965 [main] ERROR alpha.Demo - Button is not working
+20:37:18.965 [main] FATAL alpha.Demo - Button is missing
+20:38:23.494 [main] DEBUG alpha.Demo - I have clicked on Button
+20:38:23.498 [main] INFO  alpha.Demo - Button is displayed
+20:38:23.498 [main] ERROR alpha.Demo - Button is not working
