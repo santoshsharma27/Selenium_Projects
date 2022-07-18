@@ -14,6 +14,6 @@ import io.cucumber.junit.CucumberOptions;
 				"rerun:target/failed_scenarios.txt"}
 		//,tags="@PlaceOrder"
 		)
-public class MyTestRunner {
+public class MyTestRunnerTest {
 
 }

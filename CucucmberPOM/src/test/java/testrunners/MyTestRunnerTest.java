@@ -15,6 +15,6 @@ import io.cucumber.junit.CucumberOptions;
 		dryRun = false // true to check the mapping is proper between feature file and step def file
 		// tags = {"~@SmokeTest" , "~@RegressionTest", "~@End2End"}
 )
-public class MyTestRunner {
+public class MyTestRunnerTest {
 
 }
