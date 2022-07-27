@@ -11,7 +11,7 @@ import com.mypages.Page;
 
 public class BaseTest {
 
-	WebDriver driver;
+	public WebDriver driver;
 	public Page page;
 
 	@BeforeMethod()
