@@ -2,20 +2,17 @@ package stepdefinitions;
 
 import java.util.List;
 import java.util.Map;
-
 import org.junit.Assert;
-
 import com.pages.AccountsPage;
 import com.pages.LoginPage;
 import com.qa.factory.DriverFactory;
-
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 
 public class AccountsPageSteps {
 
-	private LoginPage loginPage = new LoginPage(DriverFactory.driver());
+	private LoginPage loginPage = new LoginPage(DriverFactory.getDriver());
 	private AccountsPage accountsPage;
 
 	@Given("user has already logged in to application")
@@ -23,7 +20,8 @@ public class AccountsPageSteps {
 		List<Map<String, String>> credList = dataTable.asMaps();
 		String userName = credList.get(0).get("username");
 		String password = credList.get(0).get("password");
-		DriverFactory.driver().get("http://automationpractice.com/index.php?controller=authentication&back=my-account");
+		DriverFactory.getDriver()
+				.get("http://automationpractice.com/index.php?controller=authentication&back=my-account");
 		accountsPage = loginPage.doLogin(userName, password);
 
 	}

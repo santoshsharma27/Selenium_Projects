@@ -11,7 +11,7 @@ glue = "stepdefinitions",
 stepNotifications = true,
 monochrome = true, 
 plugin = {"pretty", "html:target/cucumber.html", "json:target/cucumber.json", "junit:target/cukes.xml",
-		"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:" })
+		"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"})
 
 public class FailedTestRunner {
 

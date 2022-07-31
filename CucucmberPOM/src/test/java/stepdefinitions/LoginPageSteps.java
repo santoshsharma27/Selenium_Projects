@@ -11,11 +11,12 @@ import io.cucumber.java.en.When;
 
 public class LoginPageSteps {
 	private static String title;
-	private LoginPage loginPage = new LoginPage(DriverFactory.driver());
+	private LoginPage loginPage = new LoginPage(DriverFactory.getDriver());
 
 	@Given("user is on login page")
 	public void user_is_on_login_page() {
-		DriverFactory.driver().get("http://automationpractice.com/index.php?controller=authentication&back=my-account");
+		DriverFactory.getDriver()
+				.get("http://automationpractice.com/index.php?controller=authentication&back=my-account");
 	}
 
 	@When("user gets the title of the page")
