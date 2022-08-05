@@ -24,17 +24,9 @@ public class DriverFactory {
 		if (browser.equals("chrome")) {
 			WebDriverManager.chromedriver().setup();
 			tlDriver.set(new ChromeDriver());
-//			execute in chrome browser
-//			System.setProperty("webdriver.chrome.driver",
-//					System.getProperty("user.dir") + "/src/test/resources/BrowserJars/chromedriver.exe");
-//			driver = new ChromeDriver();
 		} else if (browser.equals("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			tlDriver.set(new FirefoxDriver());
-//			execute in firefox browser
-//			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")
-//					+ "/src/test/resources/BrowserJars/geckodriver-v0.31.0-win64/geckodriver.exe");
-//			driver = new FirefoxDriver();
 		} else if (browser.equals("safari")) {
 			tlDriver.set(new SafariDriver());
 		} else {
