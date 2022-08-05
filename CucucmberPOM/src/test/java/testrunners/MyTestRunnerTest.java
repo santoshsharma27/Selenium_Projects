@@ -8,7 +8,7 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		features = { "src/test/resources/AppFeatures" }, // path of feature file
-		glue = {"stepdefinitions", "AppHooks"}, 
+		glue = {"stepdefinitions", "appHooks"}, 
 		stepNotifications=true, // path of the step definition files
 		plugin = { "pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:", "rerun:target/failedrerun.txt"}, 
 		monochrome = true, // display the console output in a proper readable format
