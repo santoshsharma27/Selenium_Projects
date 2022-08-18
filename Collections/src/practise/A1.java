@@ -14,7 +14,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class A1 {
 
-	public static String REMOTE_URL = "https://santoshsharma_IoemBf:PqJpCEeXuBoddUs1eGWJ@hub-cloud.browserstack.com/wd/hub";
+	public static String REMOTE_URL = "";
 	// public static String REMOTE_URL = "http://localhost:4444/wd/hub";
 
 	public static void main(String[] args) throws MalformedURLException {
