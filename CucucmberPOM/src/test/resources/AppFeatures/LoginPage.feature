@@ -1,3 +1,5 @@
+
+@LoginSanity
 Feature: Login page feature
 
 Scenario: Login page title
