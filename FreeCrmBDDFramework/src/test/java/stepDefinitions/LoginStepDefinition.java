@@ -1,14 +1,12 @@
 package stepDefinitions;
 
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
-
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -18,7 +16,6 @@ public class LoginStepDefinition {
 
 	@Given("user is already on Login Page")
 	public void user_is_already_on_login_page() {
-		System.setProperty("webdriver.chrome.driver", "D:\\chromedriver_win32\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.freecrm.com/index.html");
@@ -27,14 +24,13 @@ public class LoginStepDefinition {
 
 	@When("User navigate to Login Page")
 	public void user_navigate_to_login_page() throws InterruptedException {
-		driver.findElement(
-				By.xpath("//a[normalize-space()='Login']")).click();
-		
+		driver.findElement(By.xpath("//a[normalize-space()='Login']")).click();
+
 	}
 
 	@Then("user enters {string} and {string}")
 	public void user_enters_and(String string, String string2) {
-		
+
 		driver.findElement(By.xpath("//input[@name='email']")).sendKeys(string);
 		driver.findElement(By.name("password")).sendKeys(string2);
 	}

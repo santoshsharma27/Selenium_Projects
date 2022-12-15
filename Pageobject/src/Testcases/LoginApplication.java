@@ -11,7 +11,6 @@ public class LoginApplication {
 @Test
 public void Login() throws InterruptedException
 {
-	System.setProperty("webdriver.chrome.driver", "D:\\chromedriver_win32\\chromedriver.exe");
 	WebDriver driver=new ChromeDriver();
 	driver.get("https://mail.rediff.com/cgi-bin/login.cgi");
 	driver.manage().window().maximize();

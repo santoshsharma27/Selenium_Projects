@@ -10,7 +10,6 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Base {
@@ -25,12 +24,8 @@ public class Base {
 		String browserName = prop.getProperty("browser");
 		System.out.println(browserName);
 		if (browserName.equals("chrome")) {
-			// execute in chrome browser
-			System.setProperty("webdriver.chrome.driver", "D:\\chromedriver_win32\\chromedriver.exe");
 			driver = new ChromeDriver();
 		} else if (browserName.equals("firefox")) {
-			// execute in firefox browser
-			System.setProperty("webdriver.gecko.driver", "D:\\geckodriver.exe");
 			driver = new FirefoxDriver();
 		}
 		driver.manage().window().maximize();

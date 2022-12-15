@@ -12,7 +12,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class SynchronizationInSelenium {
 
 	public static void main(String[] args) {
-		System.setProperty("webdriver.chrome.driver", "D:\\chromedriver_win32\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
