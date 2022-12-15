@@ -9,7 +9,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class ExplicictWait {
 
 	public static void main(String[] args) throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver", "D:\\chromedriver_win32\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("http://www.itgeared.com/demo/1506-ajax-loading.html");

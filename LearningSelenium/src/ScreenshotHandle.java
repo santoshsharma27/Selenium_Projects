@@ -10,7 +10,6 @@ public class ScreenshotHandle {
 	static WebDriver driver;
 
 	public static void main(String[] args) throws IOException {
-		System.setProperty("webdriver.chrome.driver", "D:\\chromedriver_win32\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.facebook.com/");
@@ -21,8 +20,8 @@ public class ScreenshotHandle {
 		// 1. take screenshot and store it as file format
 		File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		// 2. Copy the screenshot to desired location using copyfile method
-		FileUtils.copyFile(file,
-				new File("C:\\Users\\santo\\eclipse-workspace\\Selenium_Projects\\LearningSelenium\\"+fileName+".jpg"));
+		FileUtils.copyFile(file, new File(
+				"C:\\Users\\santo\\eclipse-workspace\\Selenium_Projects\\LearningSelenium\\" + fileName + ".jpg"));
 	}
 
 }

@@ -27,12 +27,9 @@ public class TestBase {
 
 		if (driver == null) {
 			if (browser.equalsIgnoreCase("chrome")) {
-				System.setProperty("webdriver.chrome.driver",
-						System.getProperty("user.dir") + "//src//test//resources//chromedriver.exe");
 				driver = new ChromeDriver();
-			}  if (browser.equalsIgnoreCase("firefox")) {
-				System.setProperty("webdriver.gecko.driver",
-						System.getProperty("user.dir") + "//src//test//resources//geckodriver.exe");
+			}
+			if (browser.equalsIgnoreCase("firefox")) {
 				driver = new FirefoxDriver();
 			}
 			driver.manage().window().maximize();

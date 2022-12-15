@@ -18,7 +18,6 @@ public class BaseTest {
 	@Parameters(value = { "browser" })
 	public void setUpTest(String browser) {
 		if (browser.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver", "D:\\chromedriver_win32\\chromedriver.exe");
 			driver = new ChromeDriver();
 		}
 		driver.get("https://app.hubspot.com/login");

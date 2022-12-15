@@ -28,7 +28,7 @@ public class HashMapExample {
 
 		emp.put(1, e1);
 		emp.put(2, e2);
-		emp.put(3, e2);
+		emp.put(3, e3);
 
 		// traverse the hashmap:
 		for (Entry<Integer, Employee> m : emp.entrySet()) {
