@@ -12,18 +12,24 @@ public class BrokenLinksNaveen {
 	public static void main(String[] args) {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.get("https://amazon.com");
+		driver.get("https://amazon.in");
 		List<WebElement> links = driver.findElements(By.tagName("a"));
 		System.out.println("No of links are : " + links.size());
+
 		ArrayList<String> urlList = new ArrayList<String>();
 		for (WebElement e : links) {
 			String url = e.getAttribute("href");
-			// urlList.add(url);
-			checkBrokenLink(url);
+			urlList.add(url);
+//			checkBrokenLink(url);
 		}
 
-		driver.quit();
+		long stTime = System.currentTimeMillis();
+		urlList.parallelStream().forEach(e -> checkBrokenLink(e));
+		long endTime = System.currentTimeMillis();
 
+		System.out.println("total time taken: " + (endTime - stTime));
+
+		driver.quit();
 	}
 
 	public static void checkBrokenLink(String linkUrl) {
